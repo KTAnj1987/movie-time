@@ -1,0 +1,31 @@
+@import "./variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+  }
+
+  .card-title {
+    margin-right: auto;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  p {
+    text-align: justify;
+    padding: 0 10px;
+  }
+}

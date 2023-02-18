@@ -1,0 +1,30 @@
+@import "./variables";
+@import "./variables";
+
+.back-link {
+  color: $titleColor;
+  margin-left: 10px;
+}
+
+.movie-details {
+  margin-top: 20px;
+}
+
+.movie-rating {
+  line-height: 2;
+  color: $blackColor;
+  background: $yelloColor;
+  padding: 5px;
+  margin: 10px;
+}
+
+.movie-detail-section {
+  line-height: 2;
+  color: $fontColor;
+  margin-top: 20px;
+  margin-left: 10px;
+
+  .title {
+    width: 25%;
+  }
+}
