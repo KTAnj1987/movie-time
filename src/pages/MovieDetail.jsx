@@ -43,7 +43,7 @@ const MovieDetail = () => {
             src={
               movie.Poster && movie.Poster !== "N/A"
                 ? movie.Poster
-                : `${window.location.origin}/default-movie.jpg`
+                : `${process.env.REACT_APP_HOME_PAGE}/assets/default-movie.jpg`
             }
           />
         </div>

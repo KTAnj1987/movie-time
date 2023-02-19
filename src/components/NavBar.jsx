@@ -21,7 +21,7 @@ const NavBar = () => {
     <div className="navbar">
       <img
         className="brand-logo"
-        src={`${window.location.origin}/logo.png`}
+        src={`${process.env.REACT_APP_HOME_PAGE}/assets/logo.png`}
         alt="brand-logo"
       />
       <Link className="brand-name" to="/">

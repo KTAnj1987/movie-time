@@ -12,7 +12,7 @@ const Card = ({ title, image, id, year }) => {
         src={
           image && image !== "N/A"
             ? image
-            : `${window.location.origin}/default-movie.jpg`
+            : `${process.env.REACT_APP_HOME_PAGE}/assets/default-movie.jpg`
         }
         onClick={() => navigate("/movie/" + id)}
         alt={title}

@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.jsx",
@@ -18,6 +19,9 @@ module.exports = {
     }),
     new Dotenv({
       systemvars: true,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "public/assets", to: "assets" }],
     }),
   ],
   module: {
@@ -43,6 +47,15 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+          outputPath: "assets/",
+          publicPath: "assets/",
+        },
       },
     ],
   },
