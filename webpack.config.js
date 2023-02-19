@@ -6,8 +6,8 @@ module.exports = {
   entry: "./src/index.jsx",
   output: {
     filename: "bundle.js",
-    path: path.join(__dirname, "/dist"),
-    publicPath: "/",
+    path: path.join(__dirname, "/build"),
+    publicPath: "auto",
   },
   devServer: {
     historyApiFallback: true,

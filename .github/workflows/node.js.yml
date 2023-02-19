@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   test:
@@ -43,5 +43,5 @@ jobs:
       - name: Deploy Project
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder the action should deploy.
+          folder: build # The folder the action should deploy.
           token: ${{ secrets.APP_TOKEN }}
