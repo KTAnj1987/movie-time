@@ -2,6 +2,7 @@
   "name": "movie-time",
   "version": "1.0.0",
   "description": "this is an assignment",
+  "homepage": "https://ktanj.github.io/movie-time/",
   "scripts": {
     "start": "webpack-dev-server --port 3000 --mode development --open --hot",
     "build": "webpack --mode production",

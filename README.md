@@ -56,3 +56,7 @@ features:
 2. Run following command to check the test coverage, and it will summarize the test coverage and it can be shown as html report in **./coverage/Icov-report/index.html** path.
 
    `npm run coverage`
+
+## Deploy Project
+
+CICD process is integrated with Github Actions and created workflow with two jobs **test** and **deploy**. Once all test passed, it will deployed to github pages. And you can visit web site from (https://ktanj.github.io/movie-time/)[https://ktanj.github.io/movie-time/]
