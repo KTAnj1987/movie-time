@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchMovieById } from "../reducer/slices/movieSlice";
 import "../styles/MovieDetail.scss";
 
@@ -47,7 +47,7 @@ const MovieDetail = () => {
             }
           />
         </div>
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column details-col">
           <h1 className="ml-2">{movie.Title}</h1>
           <small className="ml-2">{movie.Plot}</small>
           <div className="d-flex movie-rating">

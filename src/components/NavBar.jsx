@@ -28,6 +28,7 @@ const NavBar = () => {
         Movie Time
       </Link>
       <input
+        data-testid="search"
         ref={inputReff}
         onKeyDown={handleKeyDown}
         className="navebar-search"

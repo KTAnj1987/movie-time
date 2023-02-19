@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Home component shold match movie detail snapshot 1`] = `
+<div
+  className="infinite-scroll-component__outerdiv"
+  style={{}}
+>
+  <div
+    className="infinite-scroll-component "
+    style={
+      {
+        "WebkitOverflowScrolling": "touch",
+        "height": "auto",
+        "overflow": "auto",
+      }
+    }
+  >
+    <h2>
+      Search results for "
+      young
+      "
+    </h2>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="Home Alone 2"
+            className="card-top-img"
+            onClick={[Function]}
+            src="https://m.media-amazon.com/images/M/MV5BNDI1MzM0Y2YtYmIyMS00ODE3LTlhZjEtZTUyNmEzMTNhZWU5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+          />
+          <div
+            className="card-title"
+          >
+            Home Alone 2
+          </div>
+          <small
+            className="ml-auto"
+          >
+            2018
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render Home component should match movie detail snapshot 1`] = `
+<div
+  className="infinite-scroll-component__outerdiv"
+  style={{}}
+>
+  <div
+    className="infinite-scroll-component "
+    style={
+      {
+        "WebkitOverflowScrolling": "touch",
+        "height": "auto",
+        "overflow": "auto",
+      }
+    }
+  >
+    <h2
+      data-testid="searched-text"
+    >
+      Search results for "
+      young
+      "
+    </h2>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="Home Alone 2"
+            className="card-top-img"
+            onClick={[Function]}
+            src="https://m.media-amazon.com/images/M/MV5BNDI1MzM0Y2YtYmIyMS00ODE3LTlhZjEtZTUyNmEzMTNhZWU5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+          />
+          <div
+            className="card-title"
+          >
+            Home Alone 2
+          </div>
+          <small
+            className="ml-auto"
+          >
+            2018
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

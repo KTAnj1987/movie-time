@@ -1,5 +1,10 @@
 # dependencies
 /node_modules
 
+# coverage
+/coverage
+
 # production
 /build
+
+.env

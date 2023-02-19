@@ -32,7 +32,7 @@ const SearchResult = () => {
     return <h1>Loading ...</h1>;
   }
 
-  if (movies.length === 0 && error) {
+  if (movies.length === 0) {
     return (
       <>
         <h2>Search results for &quot;{query}&quot;</h2>
@@ -48,7 +48,9 @@ const SearchResult = () => {
       loader={<h4>Loading ...</h4>}
       hasMore={hasNextPage}
     >
-      <h2>Search results for &quot;{query}&quot;</h2>
+      <h2 data-testid="searched-text">
+        Search results for &quot;{query}&quot;
+      </h2>
       <div className="row">
         {movies &&
           movies.map((movie) => (

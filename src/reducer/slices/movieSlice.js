@@ -1,13 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getMovieById, getMoviesByQuery } from "../../api";
 
 export const fetchMovies = createAsyncThunk(
   "fetchMovies",
   async ({ page, query }) => {
     try {
-      const res = await fetch(
-        `https://www.omdbapi.com/?type=movie&apikey=f31b0964&page=${page}&s=${query}`
-      );
-      return await res.json();
+      return await getMoviesByQuery(page, query);
     } catch (error) {
       console.error(error);
       throw new Error("Something went wrong");
@@ -17,8 +15,7 @@ export const fetchMovies = createAsyncThunk(
 
 export const fetchMovieById = createAsyncThunk("fetchMovieById", async (id) => {
   try {
-    const res = await fetch(`https://www.omdbapi.com/?apikey=f31b0964&i=${id}`);
-    return await res.json();
+    return await getMovieById(id);
   } catch (error) {
     console.error(error);
     throw new Error("Something went wrong");
@@ -53,7 +50,6 @@ const movieSlice = createSlice({
       })
       .addCase(fetchMovies.fulfilled, (state, action) => {
         const { query } = action.meta.arg;
-
         if (action.payload.Response === "True") {
           state.data = state.data.concat(action.payload.Search);
           state.hasNextPage = state.data.length !== action.payload.totalResults;
