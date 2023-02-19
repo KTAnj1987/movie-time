@@ -59,4 +59,4 @@ features:
 
 ## Deploy Project
 
-CICD process is integrated with Github Actions and created workflow with two jobs **test** and **deploy**. Once all test passed, it will deployed to github pages. And you can visit web site from (https://ktanj.github.io/movie-time/)[https://ktanj.github.io/movie-time/]
+CICD process is integrated with Github Actions and created workflow with two jobs **test** and **deploy**. Once all test passed, it will deployed to github pages. And you can visit web site from [https://ktanj.github.io/movie-time/](https://ktanj.github.io/movie-time/)
