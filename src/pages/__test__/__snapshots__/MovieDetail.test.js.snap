@@ -21,7 +21,7 @@ exports[`should render Home component shold match movie detail snapshot 1`] = `
       />
     </div>
     <div
-      className="d-flex flex-column"
+      className="d-flex flex-column details-col"
     >
       <h1
         className="ml-2"
