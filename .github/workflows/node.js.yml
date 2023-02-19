@@ -38,9 +38,9 @@ jobs:
       - name: Build Project
         run: npm run build
         env:
-          REACT_APP_API_URL: ${{ vars.API_URL }}
+          REACT_APP_API_URL: ${{ secrets.API_URL }}
           REACT_APP_API_KEY: ${{ secrets.API_KEY }}
-          REACT_APP_HOME_PAGE: ${{ vars.APP_HOME_PAGE }}
+          REACT_APP_HOME_PAGE: ${{ secrets.APP_HOME_PAGE }}
       - name: Deploy Project
         uses: JamesIves/github-pages-deploy-action@v4
         with:
