@@ -20,11 +20,11 @@ features:
   - Search Results Page: once user search movie , it will be navigated to this page and it show the list of results movies.
   - Detail Page: once user click on movie on search list, it will be navigated to this page and it shows details of the movie
 
-  While reading assignment , I got idea to create those three pages and Home page will contain nice banner and descrption and list of this year released movies, unfortunatly time was not enough and also api is not support to get latust movies :(. Then I added serach route show search reasult component , it will help to search at every whare and navigate that page. Added Detail page to show details and back search result is show to go back to the search list wothout re freshing data.
+  While reading the assignment, I got the idea to create those three pages the Home page will contain a nice banner and description, and a list of this year's released movies, unfortunately, time was not enough, and also API does not support getting this year's movies :(. Then I added a search route showing the search result component, it will help to search everywhere and navigate that page. Added Detail page to show details and the back search result is shown to go back to the search list without refreshing data.
 
 - Keep all api fetch request seperate location (./src/api/index.js)
 
-  Initially, I didn't add API fetch requests separate folder, because it's just two requests, but while writing the test, I separated them because it is easy to mock. I created .env file to save API base url and API KEY and used them. I added ** .env.example** file, it will help to refer env variables that we added to the application. and .env file add to .gitignore to prevent developers commit their own env variables to the system
+  Initially, I didn't add API fetch requests separate folder, because it's just two requests, but while writing the test, I separated them because it is easy to mock. I created .env file to save API base url and API KEY and used them. I added **.env.example** file, it will help to refer env variables that we added to the application. and .env file add to .gitignore to prevent developers commit their own env variables to the system
 
 - Redux is used as state manger to store movie data
 
