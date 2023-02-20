@@ -20,10 +20,25 @@ features:
   - Search Results Page: once user search movie , it will be navigated to this page and it show the list of results movies.
   - Detail Page: once user click on movie on search list, it will be navigated to this page and it shows details of the movie
 
+  While reading assignment , I got idea to create those three pages and Home page will contain nice banner and descrption and list of this year released movies, unfortunatly time was not enough and also api is not support to get latust movies :(. Then I added serach route show search reasult component , it will help to search at every whare and navigate that page. Added Detail page to show details and back search result is show to go back to the search list wothout re freshing data.
+
+- Keep all api fetch request seperate location (./src/api/index.js)
+
+  Initially, I didn't add API fetch requests separate folder, because it's just two requests, but while writing the test, I separated them because it is easy to mock. I created .env file to save API base url and API KEY and used them. I added ** .env.example** file, it will help to refer env variables that we added to the application. and .env file add to .gitignore to prevent developers commit their own env variables to the system
+
 - Redux is used as state manger to store movie data
+
+  Now Redux Toolkit simplifies the process of writing Redux logic and setting up the store. movieSlice is created to manage movie data in the store. Redux Toolkit provides a createAsyncThunk API to implement the creation and dispatching of these actions, and two actions create using createAsyncThunk to fetch movie data by search query and fetch movie details by id. In this case, listen for the "pending" and "fulfilled" action types dispatched by those thunks and extraReducers to listen for those actions, then updated the state data of movie data, and request loading status ...etc
+    Also, add one reducer action to called setQuery, it will be dispatched when trigger key down event on search input with **Enter** key. It helps to reset query and page property.
+
 - [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component) is used to implement loading data while scrolling down
 - Used webpack for building aplication
+
+  This is the first time that I build up the project with a native webpack. It was amazing. I used three plugins **html-webpack-plugin** it siplify the creation of HTML files to serve the bundle, **dotenv-webpack** is used to load environment variables from a .env file into process.env, and **copy-webpack-plugin** to copy images from asserts folder to the build. Module rules are configured to compile jsx and scss files using **babel-loader**, **style-loader**, **css-loader**, and **sass-loader**. **webpack-dev-server** is used to run a web server with live reloading. And I added scripts in the package.json file to build and start the application using webpack.
+
 - Used Sass to style the application
+
+  I styled the application using Sass and added few styles. All styles are in './src/styles' folder and all colors addes as variables in variables.scss and it will reduce repetition, do complex math. App.scss will work as global css and created seperate scss file each component. I added few media queries to manage resposive application for mobile and tab views.
 
 ## Setup Project
 
@@ -49,7 +64,7 @@ features:
 
 ## Run Tests
 
-1. jest and react-testing-library are used to write tests, run following command to run test for all application
+1. jest and react-testing-library are used to write tests, run following command to run test for all application. I addted test cases separatly to test each component and add one test case to test overall functionality.
 
    `npm run test`
 
@@ -60,3 +75,5 @@ features:
 ## Deploy Project
 
 CICD process is integrated with Github Actions and created workflow with two jobs **test** and **deploy**. Once all test passed, it will deployed to github pages. And you can visit web site from [https://ktanj.github.io/movie-time/](https://ktanj.github.io/movie-time/)
+
+Here I had to change code due to deploy with github pages, because build is deploy to https://ktanj.github.io/movie-time/ , application routing is not working propely becasue it identify https://ktanj.github.io as based url. Fixed it by using **HashRouter** instead of **BrowserRouter**. Then it will append **#** to homepage url and it is ugly. We must revert that change :) .
