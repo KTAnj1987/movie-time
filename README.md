@@ -74,6 +74,6 @@ features:
 
 ## Deploy Project
 
-CICD process is integrated with Github Actions and created workflow with two jobs **test** and **deploy**. Once all test passed, it will deployed to github pages. And you can visit web site from [https://ktanj.github.io/movie-time/](https://ktanj.github.io/movie-time/)
+CICD process is integrated with Github Actions and created workflow with two jobs **test** and **deploy**. Once all test passed, it will deployed to github pages. And you can visit web site from [https://ktanj1987.github.io/movie-time/](https://ktanj1987.github.io/movie-time/)
 
 Here I had to change code due to deploy with github pages, because build is deploy to https://ktanj.github.io/movie-time/ , application routing is not working propely becasue it identify https://ktanj.github.io as based url. Fixed it by using **HashRouter** instead of **BrowserRouter**. Then it will append **#** to homepage url and it is ugly. We must revert that change :) .
