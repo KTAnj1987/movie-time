@@ -23,6 +23,11 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: "public/assets", to: "assets" }],
     }),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+    }),
   ],
   module: {
     rules: [
