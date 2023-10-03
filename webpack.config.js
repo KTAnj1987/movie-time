@@ -7,10 +7,23 @@ const webpack = require('webpack');
 module.exports = {
   entry: "./src/index.jsx",
   output: {
-    filename: "bundle.js",
+    filename: '[name].[contenthash].js',
     path: path.join(__dirname, "/build"),
     publicPath: "auto",
   },
+   optimization: {
+     moduleIds: 'deterministic',
+     runtimeChunk: 'single',
+     splitChunks: {
+       cacheGroups: {
+         vendor: {
+           test: /[\\/]node_modules[\\/]/,
+           name: 'vendors',
+           chunks: 'all',
+         },
+       },
+     },
+   },
   devServer: {
     historyApiFallback: true,
   },
