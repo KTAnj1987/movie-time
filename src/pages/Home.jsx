@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from "react";
-import OwlCarousel from 'react-owl-carousel';
-
-
+import { getBanners } from "../api";
 
 const Home = () => {
   const [images, setImages] = useState([])
-  const getBanners = async () => {
-    const response = await fetch('https://qa.edclinic.co.uk/api/v2/homePageSection')
-    return await response.json()
-  }
+
   useEffect(() => {
     getBanners().then(data=>{
       setImages(data.object.bannerHomepages)
