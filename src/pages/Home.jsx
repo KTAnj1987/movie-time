@@ -17,7 +17,7 @@ const Home = () => {
         This website offers a huge library of movie content.
       </p>
       {images && images.map((image,index) => (
-        <img style={{width: '100%'}} key={`image-${index}`} src={`https://static-qa.edclinic.co.uk/cdn-cgi/image/width=471,quality=93,f=auto/${image.imageLinkDesktop}`}/>
+        <img style={{width: '100%', height: 'auto'}} key={`image-${index}`} src={`https://static-qa.edclinic.co.uk/cdn-cgi/image/width=471,quality=93,f=auto/${image.imageLinkDesktop}`}/>
       ))}
       
     </>
