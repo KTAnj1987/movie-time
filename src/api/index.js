@@ -15,6 +15,5 @@ export const getMovieById = async (id) => {
 
 export const getBanners = async () => {
   const response = await fetch('https://qa.edclinic.co.uk/api/v2/brand/homepage')
-  data = await response.json();
-  console.log(data)
+  return await response.json();
 }
