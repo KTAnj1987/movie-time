@@ -16,7 +16,11 @@ const Home = () => {
         If you are into details of movies, Movie Time is the website for you.
         This website offers a huge library of movie content.
       </p>
-      <div style={{width: '100%', height: 'auto'}} >
+      <div style={{
+        width: '600px',
+        height: '600px',
+        aspectRatio: 'auto 600 / 600'
+      }} >
       {images && images.map((image,index) => (
         <img style={{width: '100%', height: 'auto'}} key={`image-${index}`} src={`https://static-qa.edclinic.co.uk/cdn-cgi/image/width=471,quality=93,f=auto/${image.imageLinkDesktop}`}/>
       ))}

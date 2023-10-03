@@ -11,8 +11,9 @@ exports[`should render Home component shold match home page snapshot 1`] = `
   <div
     style={
       {
-        "height": "auto",
-        "width": "100%",
+        "aspectRatio": "auto 600 / 600",
+        "height": "600px",
+        "width": "600px",
       }
     }
   />,
