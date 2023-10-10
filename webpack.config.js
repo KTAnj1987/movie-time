@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const webpack = require('webpack');
 
 module.exports = {
   entry: "./src/index.jsx",
@@ -23,12 +22,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "public/assets", to: "assets" }],
-    }),
-    new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-    }),
+    })
   ],
   module: {
     rules: [

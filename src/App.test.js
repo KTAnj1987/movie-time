@@ -27,7 +27,6 @@ jest.mock("./api", () => ({
   ...jest.requireActual("./api"),
   getMoviesByQuery: () => fetchResponse,
   getMovieById: () => ({ ...fetchResponse.Search[0], Response: "True" }),
-  getBanners: async() => ({object:{bannerHomepages:[]}}),
 }));
 
 function MockApp() {

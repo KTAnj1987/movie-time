@@ -12,8 +12,3 @@ export const getMovieById = async (id) => {
   const res = await fetch(`${BASE_URL}?apikey=${API_KEY}&i=${id}`);
   return await res.json();
 };
-
-export const getBanners = async () => {
-  const response = await fetch('https://qa.edclinic.co.uk/api/v2/homePageSection')
-  return await response.json();
-}
