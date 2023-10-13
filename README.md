@@ -44,7 +44,7 @@ features:
 
 1. Clone the project
 
-   `git clone https://github.com/KTAnj/movie-time.git`
+   `git clone https://github.com/KTAnj1987/movie-time.git`
 
 2. Go to the project directory
 
